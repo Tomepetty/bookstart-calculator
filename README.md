@@ -4,7 +4,18 @@ Bookstart Calculator (북스타트 개월 수 계산기)
 
 
 
+다운로드
+
+아래 링크에서 실행 파일을 받을 수 있습니다.
+
+https://github.com/Tomepetty/bookstart-calculator/releases/latest
+
+다운로드 페이지에서 사용 목적에 맞는 파일을 받아주세요.
+
+
+
 Developed by: Tome Petty (GitHub: @Tomepetty)
+
 
 
 본 프로그램은 원작자의 개인적인 업무 효율 향상을 위해 직접 코딩한 스크립트입니다.

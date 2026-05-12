@@ -14,7 +14,6 @@ APP_NAME = "북스타트 계산기"
 APP_VERSION = "1.1.0"
 DEVELOPER_NAME = "tomepetty"
 ICON_FILE = "icon.ico"
-
 SINGLE_INSTANCE_HOST = "127.0.0.1"
 SINGLE_INSTANCE_PORT = 41723
 
@@ -34,6 +33,17 @@ FONT_RESULT = ("맑은 고딕", 11, "bold")
 FONT_TITLE = ("맑은 고딕", 11, "bold")
 FONT_BUTTON = ("맑은 고딕", 9)
 FONT_FOOTER = ("맑은 고딕", 7)
+
+
+# =========================
+# 지역별 50+ 기능 설정
+# =========================
+# 화성시 50+ 책 꾸러미 안내 기능입니다.
+# 공통 배포용은 False, 화성시 배포용은 True로 설정합니다.
+
+ENABLE_50_PLUS = True
+REGION_NAME = "화성시"
+LOCAL_BUNDLE_NAME = "50+ 책 꾸러미"
 
 
 # =========================
@@ -168,14 +178,12 @@ def get_stage_message(birth_date, months_old, today):
     if months_old < 0:
         return "미래에서 오셨나요?\n아직 태어나지 않았어요!", COLOR_ERROR
 
-    # 만 50세 이상은 50+ 책 꾸러미 수령 대상으로 안내합니다.
-    # 50년 = 600개월이므로, months_old가 600 이상이면 만 50세 이상입니다.
-    if months_old >= 600:
+    # 화성시 50+ 책 꾸러미 안내 기능입니다.
+    # 만 50세 이상은 600개월 이상으로 판정합니다.
+    if ENABLE_50_PLUS and months_old >= 600:
         age_years = months_old // 12
-        return f"만 {age_years}세 / 50+ 수령 가능!\n전년도 수령 여부와 주소지를 확인해주세요!", COLOR_SUCCESS
+        return f"만 {age_years}세 / {LOCAL_BUNDLE_NAME} 수령 가능!\n주소지를 확인해주세요!", COLOR_SUCCESS
 
-    # 성인 연령대 입력은 오입력 가능성이 있으므로 확인 메시지를 표시합니다.
-    # 단, 만 50세 이상은 위 조건에서 먼저 처리됩니다.
     if months_old >= 228:
         return f"{months_old}개월 / 어르신...?!\n생년월일을 다시 확인하세요", COLOR_WARNING
 
