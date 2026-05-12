@@ -11,7 +11,7 @@ from datetime import date
 # =========================
 
 APP_NAME = "북스타트 계산기"
-APP_VERSION = "1.0.0"
+APP_VERSION = "1.0"
 DEVELOPER_NAME = "tomepetty"
 ICON_FILE = "icon.ico"
 
@@ -215,11 +215,11 @@ class BookStartApp:
             pass
 
     def create_widgets(self):
-        main_frame = tk.Frame(self.root)
-        main_frame.pack(fill="both", expand=True)
-
         footer_frame = tk.Frame(self.root)
         footer_frame.pack(side="bottom", fill="x", pady=(2, 6))
+
+        main_frame = tk.Frame(self.root)
+        main_frame.pack(fill="both", expand=True)
 
         self.create_header(main_frame)
         self.create_input(main_frame)
@@ -307,6 +307,7 @@ class BookStartApp:
         self.root.lift()
         self.root.focus_force()
         self.root.attributes("-topmost", True)
+        self.root.focus_set()
 
     def check_stage(self, event=None):
         today = date.today()
