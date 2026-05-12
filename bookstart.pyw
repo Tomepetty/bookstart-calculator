@@ -11,7 +11,7 @@ from datetime import date
 # =========================
 
 APP_NAME = "북스타트 계산기"
-APP_VERSION = "1.0"
+APP_VERSION = "1.0.1"
 DEVELOPER_NAME = "tomepetty"
 ICON_FILE = "icon.ico"
 
