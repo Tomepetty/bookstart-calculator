@@ -3,6 +3,8 @@ Bookstart Calculator (북스타트 개월 수 계산기)
 
 
 
+
+
 다운로드
 아래 링크에서 실행 파일을 받을 수 있습니다.
 https://github.com/Tomepetty/bookstart-calculator/releases/latest
@@ -10,7 +12,10 @@ https://github.com/Tomepetty/bookstart-calculator/releases/latest
 
 
 
+
+
 Developed by: Tome Petty (GitHub: @Tomepetty)
+
 
 
 
