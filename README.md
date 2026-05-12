@@ -1,15 +1,11 @@
 Bookstart Calculator (북스타트 개월 수 계산기)
-
 도서관 북스타트 프로그램의 아기 개월 수를 자동으로 계산하고, 출생 연월일에 따른 단계를 판독해 주는 위젯입니다.
 
 
 
 다운로드
-
 아래 링크에서 실행 파일을 받을 수 있습니다.
-
 https://github.com/Tomepetty/bookstart-calculator/releases/latest
-
 다운로드 페이지에서 사용 목적에 맞는 파일을 받아주세요.
 
 
